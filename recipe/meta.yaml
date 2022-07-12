@@ -1,5 +1,5 @@
 {% set name = "dsconfig" %}
-{% set version = "1.6.2" %}
+{% set version = "1.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dsconfig-{{ version }}.tar.gz
-  sha256: ad92d5b52e41a3c2cdf106230f561f1f42ac05452354d67f67fec4a87cc55173
+  sha256: 9bf0dbd456cbd1a0db7829a505626d2204fee4a041e073dd541d2e2ced51d7e7
 
 build:
   number: 0
