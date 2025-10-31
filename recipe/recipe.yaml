@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dsconfig
-  version: 1.8.0
+  version: 1.9.0
 
 package:
   name: ${{ name|lower }}
@@ -10,28 +10,29 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dsconfig-${{ version }}.tar.gz
-  sha256: efc2ba9f39bc44b32b28d5267f31a4a617cc685d856e78443848964773449f7f
+  sha256: 7e2c5106f02f5652a8dfbdbc86863139580cfe194aa8b466bc215f5425731b41
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - xls2json = dsconfig.excel:main
       - json2tango = dsconfig.json2tango:main
+      - tango2json = dsconfig.dump:main
 
 requirements:
   host:
     - pip
     - python ${{ python_min }}.*
     - setuptools
+    - setuptools-scm
   run:
     - jsonpatch >=1.13
     - jsonschema
     - pytango
     - python >=${{ python_min }}
-    - six
     - xlrd
 
 tests:
@@ -39,15 +40,17 @@ tests:
       imports:
         - dsconfig
         - dsconfig.appending_dict
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
+      pip_check: true
+  - script:
       - xls2json --help
       - json2tango --help
+      - tango2json --help
+    requirements:
+      run:
+        - python ${{ python_min }}.*
 
 about:
   summary: Library and utilities for Tango device configuration.
