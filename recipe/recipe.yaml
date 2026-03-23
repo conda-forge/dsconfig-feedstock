@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dsconfig
-  version: 1.9.0
+  version: "1.9.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dsconfig-${{ version }}.tar.gz
-  sha256: 7e2c5106f02f5652a8dfbdbc86863139580cfe194aa8b466bc215f5425731b41
+  sha256: 9f0faae1061f42977242c28ab93629b3e781faa85c57bee2963097b05ca5f1af
 
 build:
   number: 0
