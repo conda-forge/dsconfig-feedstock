@@ -3,13 +3,13 @@ About dsconfig-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dsconfig-feedstock/blob/main/LICENSE.txt)
 
-Home: https://gitlab.com/MaxIV/lib-maxiv-dsconfig
+Home: https://gitlab.com/MaxIV/tools/dsconfig
 
 Package license: GPL-3.0-or-later
 
 Summary: Library and utilities for Tango device configuration.
 
-Development: https://gitlab.com/MaxIV/lib-maxiv-dsconfig
+Development: https://gitlab.com/MaxIV/tools/dsconfig
 
 This is a command line tool for managing configuration of Tango device servers.
 Tango-Controls is a software toolkit for building control systems.
