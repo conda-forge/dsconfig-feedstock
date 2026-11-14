@@ -59,8 +59,8 @@ about:
   description: |
     This is a command line tool for managing configuration of Tango device servers.
     Tango-Controls is a software toolkit for building control systems.
-  homepage: https://gitlab.com/MaxIV/lib-maxiv-dsconfig
-  repository: https://gitlab.com/MaxIV/lib-maxiv-dsconfig
+  homepage: https://gitlab.com/MaxIV/tools/dsconfig
+  repository: https://gitlab.com/MaxIV/tools/dsconfig
 
 extra:
   recipe-maintainers:
